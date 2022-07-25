@@ -6,3 +6,7 @@ def solution(arr, divisor):
     answer.sort()
     
     return answer or [-1]
+
+def solution(arr, divisor):
+    array = list(filter(lambda x: x%divisor==0, arr))
+    return sorted(array) or [-1]
