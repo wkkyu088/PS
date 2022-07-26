@@ -7,3 +7,10 @@ def solution(price, money, count):
         answer = 0
 
     return answer
+
+def solution(price, money, count):
+    answer = sum(range(price, price*count+1, price)) - money
+    return answer if answer>0 else 0
+
+def solution(price, money, count):
+    return max(0, count*price*(count+1)//2-money)
