@@ -18,3 +18,15 @@ def solution(answers):
         if num[i] == maxA:
             answer.append(i)
     return answer
+
+def solution(answers):
+    pattern = [[1, 2, 3, 4, 5],
+             [2, 1, 2, 3, 2, 4, 2, 5],
+             [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
+    score = [0, 0, 0]
+
+    for q, a in enumerate(answers):
+        for i, v in enumerate(pattern):
+            if a == v[q % len(v)]:
+                score[i] += 1
+    return [i + 1 for i, v in enumerate(score) if v == max(score)]
