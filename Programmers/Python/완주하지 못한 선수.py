@@ -17,3 +17,12 @@ def solution(participant, completion):
             answer = i
 
     return answer
+
+def solution(participant, completion):
+    arr = {}
+    for p in participant:
+        if p in arr: arr[p] += 1
+        else: arr[p] = 1
+    for c in completion:
+        arr[c] += 1
+    return [i for i in arr.keys() if arr[i]%2!=0][0]

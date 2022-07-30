@@ -5,3 +5,6 @@ def solution(array, commands):
         temp.sort()
         answer.append(temp[c[2]-1])
     return answer
+
+def solution(array, cmd):
+    return [sorted(array[i-1:j])[k-1] for i, j, k in cmd]
